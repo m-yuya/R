@@ -1,5 +1,5 @@
 * R
 personal backup for R codes
 ** BoxPlot
-*** simple_Boxplot
+*** simple_BoxPlot
 	[[file:BoxPlot/simple_BoxPlot/simple_BoxPlot.png]]
