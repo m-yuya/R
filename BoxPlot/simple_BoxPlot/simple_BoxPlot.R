@@ -33,8 +33,7 @@ simple_BoxPlot <- function(data) {
         font.lab=1,                        # label font
         font.axis=1,                       # axis font
         cex.lab=1.8,                        # label font size
-        cex.axis=0.7,                       # axis font size
-        las=1                               # style
+        cex.axis=0.7                       # axis font size
     )
     boxplot(
         data,
@@ -57,7 +56,7 @@ simple_BoxPlot(data)
 dev.off()
 
 ## output file as png
-png("simple_BoxPlot.png", width = 800, height =600)
+png("simple_BoxPlot.png", width = 600, height =400)
 simple_BoxPlot(data)
 dev.off()
 
