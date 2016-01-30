@@ -70,7 +70,9 @@ all_data <- list(data1, data2)         # merge two data (data.frame) into a list
 
 ## define x-axis scale name
 xaxis_scale <- c("256", "512", "1K", "2K", "4K", "8K", "16K", "32K", "64K", "128K", "256K", "512K", "1M", "2M", "4M")
-cols <- c("red", "blue")                # boxplot colors
+box_cols <- c("pink", "lightcyan")                # box colors
+## border_cols <- c("red", "blue")                   # box-line colrs
+border_cols <- c("red", "blue")                   # box-line colors
 
 ## graphic function
 comparison_BoxPlot <- function(all_data) {
@@ -100,19 +102,23 @@ comparison_BoxPlot <- function(all_data) {
         boxplot(
             all_data[[i]],
             at = c(1:ncol(data1)) * 2 + i - 2.5, # position of drawing boxplot
-            col = cols[i],                       # colors
+            border   = border_cols[i],                 # ボックス枠線の色
+            col = box_cols[i],                       # colors
             xaxt = "n",                          # no x-axis scale
             range = 0,                           # no plot outliers 
             add = TRUE)
     }
     ## legend
     legend(
-        "topleft",                      # position
+        1, 3.25,                      # position
         legend = c("data1", "data2"),   # labels
         cex = 1.5,                      # labels font size
-        col = cols,                     # colors
         pt.cex = 3,                     # marker size
-        pch = 15,                       # kinds of marker
+        pch = 22,                       # kinds of marker
+        col = border_cols,              # box-line colors
+        pt.bg = box_cols,               # box colors
+        lty = 0,                               
+        lwd = 2,                        # box-line width
         bg = "white"                    # background color
     )
     ## x-axis scale
@@ -131,6 +137,6 @@ comparison_BoxPlot(all_data)
 dev.off()
 
 ## output file as png
-png("comparison_BoxPlot.png", width = 600, height =600)
+png("comparison_BoxPlot.png", width = 600, height =400)
 comparison_BoxPlot(all_data)
 dev.off()

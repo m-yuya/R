@@ -38,7 +38,7 @@ simple_BoxPlot <- function(data) {
     boxplot(
         data,
         xlab="datasize [byte]",             # x-axis label
-        ylab="latency [msec]",              # y-axis label
+        ylab="latency [ms]",              # y-axis label
 #        ylim=c(0, 6),                     # y-axis data span
         range = 0                          # include outliers into boxplot
     )
