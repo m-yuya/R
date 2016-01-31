@@ -51,7 +51,7 @@ simple_BoxPlot(data)
 dev.off()                               # close rendering
 
 ## output file as eps
-postscript("simple_BoxPlot.eps", horizontal = F, width = 10, height = 6)
+postscript("simple_BoxPlot.eps", horizontal = F,, onefile = FALSE, paper = "special", width = 10, height = 6)
 simple_BoxPlot(data)
 dev.off()
 

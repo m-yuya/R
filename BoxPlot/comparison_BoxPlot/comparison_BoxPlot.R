@@ -132,7 +132,7 @@ comparison_BoxPlot <- function(all_data) {
 }
 
 ## output file as eps
-postscript("comparison_BoxPlot.eps", horizontal = F, width = 8, height = 6)
+postscript("comparison_BoxPlot.eps", horizontal = F, onefile = FALSE, paper = "special", width = 8, height = 6)
 comparison_BoxPlot(all_data)
 dev.off()
 
