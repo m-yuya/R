@@ -27,19 +27,20 @@ colnames(data) <- c("256", "512", "1K", "2K", "4K", "8K", "16K", "32K", "64K", "
 
 
 ## graphic function
-simple_BoxPlot <- function(data) {
+simple_BoxPlot <- function(data, ylim) {
     par(
         mar=c(5,6,2,2),                     # margin
         font.lab=1,                        # label font
         font.axis=1,                       # axis font
         cex.lab=1.8,                        # label font size
-        cex.axis=0.7                       # axis font size
+        las = 3,                            # rotate x-axis label
+        cex.axis=1                       # axis font size
     )
     boxplot(
         data,
         xlab="datasize [byte]",             # x-axis label
         ylab="latency [ms]",              # y-axis label
-#        ylim=c(0, 6),                     # y-axis data span
+        ylim=c(0, ylim),                     # y-axis data span
         range = 0                          # include outliers into boxplot
     )
 }
@@ -47,16 +48,16 @@ simple_BoxPlot <- function(data) {
 
 ## output file as pdf
 pdf("simple_BoxPlot.pdf")            # start rendering graph as "BoxPlot.pdf"
-simple_BoxPlot(data)
+simple_BoxPlot(data, 6)
 dev.off()                               # close rendering
 
 ## output file as eps
 postscript("simple_BoxPlot.eps", horizontal = F,, onefile = FALSE, paper = "special", width = 10, height = 6)
-simple_BoxPlot(data)
+simple_BoxPlot(data, 6)
 dev.off()
 
 ## output file as png
 png("simple_BoxPlot.png", width = 600, height =400)
-simple_BoxPlot(data)
+simple_BoxPlot(data, 6)
 dev.off()
 
