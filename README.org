@@ -7,3 +7,9 @@ personal backup for R codes
 	[[file:BoxPlot/comparison_BoxPlot/comparison_BoxPlot.png]]
 *** multiple_BoxPlot
 	[[file:BoxPlot/multiple_BoxPlot/multiple_BoxPlot.png]]
+** BarPlot
+*** simple_BarPlot
+	[[file:BarPlot/simple_BarPlot/simple_BarPlot.png]]
+*** breakdown_BarPlot
+	[[file:BarPlot/breakdown_BarPlot/breakdown_BarPlot.png]]	
+	
