@@ -12,4 +12,6 @@ personal backup for R codes
 	[[file:BarPlot/simple_BarPlot/simple_BarPlot.png]]
 *** breakdown_BarPlot
 	[[file:BarPlot/breakdown_BarPlot/breakdown_BarPlot.png]]	
+*** comparison_BarPlot
+	[[file:BarPlot/comparison_BarPlot/comparison_BarPlot.png]]	
 	

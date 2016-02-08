@@ -49,11 +49,11 @@ simple_BarPlot <- function(data, ylim) {
 
 ## output file as eps
 postscript("simple_BarPlot.eps", horizontal = F, onefile = FALSE, paper = "special", width = 10, height = 6)
-simple_BarPlot(data, 5)
+simple_BarPlot(data, 2)
 dev.off()
 
 ## output file as png
 png("simple_BarPlot.png", width = 600, height =400)
-simple_BarPlot(data, 5)
+simple_BarPlot(data, 2)
 dev.off()
 

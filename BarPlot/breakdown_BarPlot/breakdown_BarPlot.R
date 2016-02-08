@@ -117,7 +117,7 @@ data3 <- data * 1000                    # convert unit from sec to msec
 group3.median <- apply(data3, 2, median, na.rm = T)
 
 ## -------------------------------------------------- 
-## load data
+## plot function
 ## --------------------------------------------------
 
 ## merge data 
@@ -141,7 +141,7 @@ breakdown_BarPlot <- function(data, ylim) {
     ## legend
     legend(
         1, ylim,                      # position
-        legend = c("data1", "data2", "data3"),   # labels
+        legend = c("data3", "data2", "data1"),   # labels
         cex = 1.5,                      # labels font size
         pt.cex = 3,                     # marker size
         pch = 22,                       # kinds of marker
@@ -151,8 +151,6 @@ breakdown_BarPlot <- function(data, ylim) {
         bg = "white"                    # background color
     )
 }
-
-
 
 ## output file as eps
 postscript("breakdown_BarPlot.eps", horizontal = F, onefile = FALSE, paper = "special", width = 10, height = 6)
