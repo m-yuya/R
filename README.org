@@ -15,3 +15,6 @@ personal backup for R codes
 *** comparison_BarPlot
 	[[file:BarPlot/comparison_BarPlot/comparison_BarPlot.png]]	
 	
+** Appendix
+  R-Tips - http://cse.naro.affrc.go.jp/takezawa/r-tips/r2.html
+
